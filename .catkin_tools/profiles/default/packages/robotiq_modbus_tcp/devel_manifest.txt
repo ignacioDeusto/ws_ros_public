@@ -1,0 +1,6 @@
+robotiq/robotiq_modbus_tcp
+/home/ignacio/ws_moveit/devel/.private/robotiq_modbus_tcp/cmake.lock /home/ignacio/ws_moveit/devel/./cmake.lock
+/home/ignacio/ws_moveit/devel/.private/robotiq_modbus_tcp/lib/pkgconfig/robotiq_modbus_tcp.pc /home/ignacio/ws_moveit/devel/lib/pkgconfig/robotiq_modbus_tcp.pc
+/home/ignacio/ws_moveit/devel/.private/robotiq_modbus_tcp/lib/python3/dist-packages/robotiq_modbus_tcp/__init__.py /home/ignacio/ws_moveit/devel/lib/python3/dist-packages/robotiq_modbus_tcp/__init__.py
+/home/ignacio/ws_moveit/devel/.private/robotiq_modbus_tcp/share/robotiq_modbus_tcp/cmake/robotiq_modbus_tcpConfig.cmake /home/ignacio/ws_moveit/devel/share/robotiq_modbus_tcp/cmake/robotiq_modbus_tcpConfig.cmake
+/home/ignacio/ws_moveit/devel/.private/robotiq_modbus_tcp/share/robotiq_modbus_tcp/cmake/robotiq_modbus_tcpConfig-version.cmake /home/ignacio/ws_moveit/devel/share/robotiq_modbus_tcp/cmake/robotiq_modbus_tcpConfig-version.cmake

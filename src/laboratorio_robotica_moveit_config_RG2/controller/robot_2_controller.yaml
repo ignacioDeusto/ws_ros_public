@@ -1,0 +1,32 @@
+robot_2/scaled_pos_joint_traj_controller:
+  #action_ns: /robot_2/scaled_pos_joint_traj_controller/follow_joint_trajectory
+  type: position_controllers/JointTrajectoryController
+  joints:
+     - robot_2_shoulder_pan_joint
+     - robot_2_shoulder_lift_joint
+     - robot_2_elbow_joint
+     - robot_2_wrist_1_joint
+     - robot_2_wrist_2_joint
+     - robot_2_wrist_3_joint
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0.05
+      robot_2_shoulder_pan_joint: {trajectory: 0.1, goal: 0.1}
+      robot_2_shoulder_lift_joint: {trajectory: 0.1, goal: 0.1}
+      robot_2_elbow_joint: {trajectory: 0.1, goal: 0.1}
+      robot_2_wrist_1_joint: {trajectory: 0.1, goal: 0.1}
+      robot_2_wrist_2_joint: {trajectory: 0.1, goal: 0.1}
+      robot_2_wrist_3_joint: {trajectory: 0.1, goal: 0.1}
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 10
+joint_group_position_controller:
+  type: position_controllers/JointGroupPositionController
+  joints:
+     - robot_2_shoulder_pan_joint
+     - robot_2_shoulder_lift_joint
+     - robot_2_elbow_joint
+     - robot_2_wrist_1_joint
+     - robot_2_wrist_2_joint
+     - robot_2_wrist_3_joint
+

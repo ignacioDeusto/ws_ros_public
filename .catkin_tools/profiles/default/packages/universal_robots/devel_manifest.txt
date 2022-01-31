@@ -1,0 +1,2 @@
+fmauch_universal_robot/universal_robots
+/home/ignacio/ws_ros_public/devel/.private/universal_robots/cmake.lock /home/ignacio/ws_ros_public/devel/./cmake.lock

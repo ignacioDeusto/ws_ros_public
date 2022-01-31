@@ -1,0 +1,5 @@
+novembe_paper
+/home/ignacio/ws_moveit_copy/devel/.private/novembe_paper/cmake.lock /home/ignacio/ws_moveit_copy/devel/./cmake.lock
+/home/ignacio/ws_moveit_copy/devel/.private/novembe_paper/lib/pkgconfig/novembe_paper.pc /home/ignacio/ws_moveit_copy/devel/lib/pkgconfig/novembe_paper.pc
+/home/ignacio/ws_moveit_copy/devel/.private/novembe_paper/share/novembe_paper/cmake/novembe_paperConfig.cmake /home/ignacio/ws_moveit_copy/devel/share/novembe_paper/cmake/novembe_paperConfig.cmake
+/home/ignacio/ws_moveit_copy/devel/.private/novembe_paper/share/novembe_paper/cmake/novembe_paperConfig-version.cmake /home/ignacio/ws_moveit_copy/devel/share/novembe_paper/cmake/novembe_paperConfig-version.cmake

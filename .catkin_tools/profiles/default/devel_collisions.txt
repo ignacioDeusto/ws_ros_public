@@ -1,0 +1,4 @@
+/home/ignacio/ws_moveit/devel/./cmake.lock 2619
+/home/ignacio/ws_moveit_copy/devel/./cmake.lock 2
+/home/ignacio/ws_ros/devel/./cmake.lock 195
+/home/ignacio/ws_ros_public/devel/./cmake.lock 325

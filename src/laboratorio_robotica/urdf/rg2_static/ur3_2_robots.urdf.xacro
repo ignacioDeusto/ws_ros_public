@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro"
+       name="ur3" >
+
+  <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
+
+  <xacro:property name="base_robot_1_x" value="0.0"/>
+  <xacro:property name="base_robot_1_y" value="0.0"/>
+  <xacro:property name="base_robot_1_z" value="0.5"/>
+  <xacro:property name="base_robot_1_roll" value="0.0"/>
+  <xacro:property name="base_robot_1_pitch" value="0.0"/>
+  <xacro:property name="base_robot_1_yaw" value="-0.769"/>
+  <!-- <xacro:property name="base_robot_2_x" value="0.862"/> -->
+  <xacro:property name="base_robot_2_x" value="0.902"/>
+  <xacro:property name="base_robot_2_y" value="0.01"/>
+  <xacro:property name="base_robot_2_z" value="0.5"/>
+  <xacro:property name="base_robot_2_roll" value="0.0"/>
+  <xacro:property name="base_robot_2_pitch" value="0.0"/>
+  <xacro:property name="base_robot_2_yaw" value="0.9562"/>
+  <xacro:property name="prefix_robot_1" value="robot_1_"/>
+  <xacro:property name="prefix_robot_2" value="robot_2_"/>
+  <xacro:property name="tamano_mesa_x" value="1.2"/>
+  <xacro:property name="tamano_mesa_y" value="0.83"/>
+  <xacro:property name="tamano_mesa_z" value="0.5"/>
+  <xacro:property name="tamano_recogida_x" value="0.5"/>
+  <xacro:property name="tamano_recogida_y" value="0.4"/>
+  <xacro:property name="tamano_recogida_z" value="0.0001"/>
+
+  <!-- common stuff -->
+  <xacro:include filename="$(find laboratorio_robotica)/urdf/common.gazebo.xacro" />
+
+  <!-- ur3 -->
+  <!-- <xacro:include filename="$(find laboratorio_robotica)/urdf/ur3_2.urdf.xacro" /> -->
+  <xacro:include filename="$(find laboratorio_robotica)/urdf/ur3_2_pruebas.urdf.xacro" />
+  
+  <!-- Pinza -->
+  <xacro:include filename="$(find laboratorio_robotica)/urdf/rg2_static/pinza_laboratorio_robótica.urdf.xacro" />
+
+  <!-- arm1 -->
+  <xacro:arg name="kinematics_config" default="$(find laboratorio_robotica)/calibration/calibration_203.yaml"/>
+  <xacro:ur3_robot prefix="${prefix_robot_1}" joint_limited="true"
+    transmission_hw_interface="$(arg transmission_hw_interface)"
+    kinematics_file="${load_yaml('$(arg kinematics_config)')}"/>
+
+  <!-- Pinza arm1 -->
+  <xacro:pinza_RG2_static prefix="${prefix_robot_1}" parent_conector="${prefix_robot_1}tool0"/>
+
+  <!-- arm2 -->
+  <xacro:arg name="kinematics_config" default="$(find laboratorio_robotica)/calibration/calibration_204.yaml"/>
+  <xacro:ur3_robot prefix="${prefix_robot_2}" joint_limited="true"
+    transmission_hw_interface="$(arg transmission_hw_interface)"
+    kinematics_file="${load_yaml('$(arg kinematics_config)')}"/>
+
+  <!-- Pinza arm2 -->
+  <xacro:pinza_RG2_static prefix="${prefix_robot_2}" parent_conector="${prefix_robot_2}tool0"/>
+  
+  <!-- Suelo común para los 2 robots(Es necesario para luego juntar el suelo común con el world) -->
+  <link name="suelo_sistema">
+    <visual>
+      <origin xyz="${tamano_mesa_x/2 - 0.143} ${tamano_mesa_y/2 - 0.143} 0.25" rpy="0 0 0"/>
+      <geometry>
+        <box size="${tamano_mesa_x} ${tamano_mesa_y} ${tamano_mesa_z}"/>
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="${tamano_mesa_x/2 - 0.143} ${tamano_mesa_y/2 - 0.143} 0.25" rpy="0 0 0"/>
+      <geometry>
+        <box size="${tamano_mesa_x} ${tamano_mesa_y} ${tamano_mesa_z}"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>	
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>		
+    </inertial>
+  </link>
+  <gazebo reference="suelo_sistema">
+    <material>PR2/Grey3</material>
+  </gazebo>
+  <!-- Juntas al suelo de los 2 robots -->
+  <joint name="junta_suelo_sistema_robot_1" type="fixed">
+    <parent link="suelo_sistema" />
+    <child link="${prefix_robot_1}base_link" />
+    <origin xyz="${base_robot_1_x} ${base_robot_1_y} ${base_robot_1_z}" rpy="${base_robot_1_roll} ${base_robot_1_pitch} ${base_robot_1_yaw}" />
+  </joint>
+
+  <joint name="junta_suelo_sistema_robot_2" type="fixed">
+    <parent link="suelo_sistema" />
+    <child link="${prefix_robot_2}base_link" />
+    <origin xyz="${base_robot_2_x} ${base_robot_2_y} ${base_robot_2_z}" rpy="${base_robot_2_roll} ${base_robot_2_pitch} ${base_robot_2_yaw}" />
+  </joint>
+
+  <!-- Junta  con el suelo de gazebo -->
+  <link name="world" />
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "suelo_sistema" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+
+</robot>

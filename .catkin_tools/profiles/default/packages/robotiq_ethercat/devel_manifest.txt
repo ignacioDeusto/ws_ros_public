@@ -1,0 +1,6 @@
+robotiq/robotiq_ethercat
+/home/ignacio/ws_moveit/devel/.private/robotiq_ethercat/cmake.lock /home/ignacio/ws_moveit/devel/./cmake.lock
+/home/ignacio/ws_moveit/devel/.private/robotiq_ethercat/lib/librobotiq_ethercat.so /home/ignacio/ws_moveit/devel/lib/librobotiq_ethercat.so
+/home/ignacio/ws_moveit/devel/.private/robotiq_ethercat/lib/pkgconfig/robotiq_ethercat.pc /home/ignacio/ws_moveit/devel/lib/pkgconfig/robotiq_ethercat.pc
+/home/ignacio/ws_moveit/devel/.private/robotiq_ethercat/share/robotiq_ethercat/cmake/robotiq_ethercatConfig-version.cmake /home/ignacio/ws_moveit/devel/share/robotiq_ethercat/cmake/robotiq_ethercatConfig-version.cmake
+/home/ignacio/ws_moveit/devel/.private/robotiq_ethercat/share/robotiq_ethercat/cmake/robotiq_ethercatConfig.cmake /home/ignacio/ws_moveit/devel/share/robotiq_ethercat/cmake/robotiq_ethercatConfig.cmake

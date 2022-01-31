@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find laboratorio_robotica_moveit_config_RG2)/config/ros_controllers.yaml" command="load"/>
+
+  <!-- Load the controllers -->
+  <!-- <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" args=""/> -->
+
+  <rosparam file="$(find laboratorio_robotica_moveit_config_RG2)/controller/joint_state_controller.yaml" command="load"/>
+  <node name="joint_state_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="joint_state_controller"/>
+
+  <rosparam file="$(find laboratorio_robotica_moveit_config_RG2)/controller/robot_1_controller.yaml" command="load"/>
+  <node name="robot_1_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="robot_1/scaled_pos_joint_traj_controller"/>
+  
+  <rosparam file="$(find laboratorio_robotica_moveit_config_RG2)/controller/robot_2_controller.yaml" command="load"/>
+  <node name="robot_2_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="robot_2/scaled_pos_joint_traj_controller"/>
+
+</launch>

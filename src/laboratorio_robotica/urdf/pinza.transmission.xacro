@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <xacro:macro name="pinza_IO_transmission" params="prefix hw_interface">
+
+    <transmission name="${prefix}rigth_gripper_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}rigth_gripper_joint">
+        <hardwareInterface>${hw_interface}</hardwareInterface>
+      </joint>
+      <actuator name="${prefix}rigth_gripper_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <transmission name="${prefix}left_gripper_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}left_gripper_joint">
+        <hardwareInterface>${hw_interface}</hardwareInterface>
+      </joint>
+      <actuator name="${prefix}left_gripper_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+  </xacro:macro>
+
+</robot>

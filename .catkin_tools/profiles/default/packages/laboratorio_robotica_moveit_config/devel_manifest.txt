@@ -1,0 +1,5 @@
+laboratorio_robotica_moveit_config_copy
+/home/ignacio/ws_ros_public/devel/.private/laboratorio_robotica_moveit_config/cmake.lock /home/ignacio/ws_ros_public/devel/./cmake.lock
+/home/ignacio/ws_ros_public/devel/.private/laboratorio_robotica_moveit_config/share/laboratorio_robotica_moveit_config/cmake/laboratorio_robotica_moveit_configConfig.cmake /home/ignacio/ws_ros_public/devel/share/laboratorio_robotica_moveit_config/cmake/laboratorio_robotica_moveit_configConfig.cmake
+/home/ignacio/ws_ros_public/devel/.private/laboratorio_robotica_moveit_config/share/laboratorio_robotica_moveit_config/cmake/laboratorio_robotica_moveit_configConfig-version.cmake /home/ignacio/ws_ros_public/devel/share/laboratorio_robotica_moveit_config/cmake/laboratorio_robotica_moveit_configConfig-version.cmake
+/home/ignacio/ws_ros_public/devel/.private/laboratorio_robotica_moveit_config/lib/pkgconfig/laboratorio_robotica_moveit_config.pc /home/ignacio/ws_ros_public/devel/lib/pkgconfig/laboratorio_robotica_moveit_config.pc

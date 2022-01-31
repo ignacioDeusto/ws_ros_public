@@ -1,0 +1,9 @@
+laboratorio_robotica
+/home/ignacio/ws_ros_public/devel/.private/laboratorio_robotica/cmake.lock /home/ignacio/ws_ros_public/devel/./cmake.lock
+/home/ignacio/ws_ros_public/devel/.private/laboratorio_robotica/share/laboratorio_robotica/cmake/laboratorio_roboticaConfig-version.cmake /home/ignacio/ws_ros_public/devel/share/laboratorio_robotica/cmake/laboratorio_roboticaConfig-version.cmake
+/home/ignacio/ws_ros_public/devel/.private/laboratorio_robotica/share/laboratorio_robotica/cmake/laboratorio_robotica-msg-paths.cmake /home/ignacio/ws_ros_public/devel/share/laboratorio_robotica/cmake/laboratorio_robotica-msg-paths.cmake
+/home/ignacio/ws_ros_public/devel/.private/laboratorio_robotica/share/laboratorio_robotica/cmake/laboratorio_robotica-msg-extras.cmake /home/ignacio/ws_ros_public/devel/share/laboratorio_robotica/cmake/laboratorio_robotica-msg-extras.cmake
+/home/ignacio/ws_ros_public/devel/.private/laboratorio_robotica/share/laboratorio_robotica/cmake/laboratorio_roboticaConfig.cmake /home/ignacio/ws_ros_public/devel/share/laboratorio_robotica/cmake/laboratorio_roboticaConfig.cmake
+/home/ignacio/ws_ros_public/devel/.private/laboratorio_robotica/share/roseus/ros/laboratorio_robotica/manifest.l /home/ignacio/ws_ros_public/devel/share/roseus/ros/laboratorio_robotica/manifest.l
+/home/ignacio/ws_ros_public/devel/.private/laboratorio_robotica/lib/pkgconfig/laboratorio_robotica.pc /home/ignacio/ws_ros_public/devel/lib/pkgconfig/laboratorio_robotica.pc
+/home/ignacio/ws_ros_public/devel/.private/laboratorio_robotica/lib/python3/dist-packages/laboratorio_robotica/__init__.py /home/ignacio/ws_ros_public/devel/lib/python3/dist-packages/laboratorio_robotica/__init__.py

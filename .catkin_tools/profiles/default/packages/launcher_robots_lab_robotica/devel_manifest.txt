@@ -1,0 +1,5 @@
+launcher_robots_lab_robotica
+/home/ignacio/ws_ros_public/devel/.private/launcher_robots_lab_robotica/cmake.lock /home/ignacio/ws_ros_public/devel/./cmake.lock
+/home/ignacio/ws_ros_public/devel/.private/launcher_robots_lab_robotica/share/launcher_robots_lab_robotica/cmake/launcher_robots_lab_roboticaConfig-version.cmake /home/ignacio/ws_ros_public/devel/share/launcher_robots_lab_robotica/cmake/launcher_robots_lab_roboticaConfig-version.cmake
+/home/ignacio/ws_ros_public/devel/.private/launcher_robots_lab_robotica/share/launcher_robots_lab_robotica/cmake/launcher_robots_lab_roboticaConfig.cmake /home/ignacio/ws_ros_public/devel/share/launcher_robots_lab_robotica/cmake/launcher_robots_lab_roboticaConfig.cmake
+/home/ignacio/ws_ros_public/devel/.private/launcher_robots_lab_robotica/lib/pkgconfig/launcher_robots_lab_robotica.pc /home/ignacio/ws_ros_public/devel/lib/pkgconfig/launcher_robots_lab_robotica.pc

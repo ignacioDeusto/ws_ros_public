@@ -1,0 +1,7 @@
+geometric_shapes
+/home/ignacio/ws_ros_public/devel/.private/geometric_shapes/cmake.lock /home/ignacio/ws_ros_public/devel/./cmake.lock
+/home/ignacio/ws_ros_public/devel/.private/geometric_shapes/lib/libgeometric_shapes.so.0.7.2 /home/ignacio/ws_ros_public/devel/lib/libgeometric_shapes.so.0.7.2
+/home/ignacio/ws_ros_public/devel/.private/geometric_shapes/lib/libgeometric_shapes.so /home/ignacio/ws_ros_public/devel/lib/libgeometric_shapes.so
+/home/ignacio/ws_ros_public/devel/.private/geometric_shapes/lib/pkgconfig/geometric_shapes.pc /home/ignacio/ws_ros_public/devel/lib/pkgconfig/geometric_shapes.pc
+/home/ignacio/ws_ros_public/devel/.private/geometric_shapes/share/geometric_shapes/cmake/geometric_shapesConfig.cmake /home/ignacio/ws_ros_public/devel/share/geometric_shapes/cmake/geometric_shapesConfig.cmake
+/home/ignacio/ws_ros_public/devel/.private/geometric_shapes/share/geometric_shapes/cmake/geometric_shapesConfig-version.cmake /home/ignacio/ws_ros_public/devel/share/geometric_shapes/cmake/geometric_shapesConfig-version.cmake

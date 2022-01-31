@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+<!--
+  Author: Ignacio Fidalgo
+-->
+
+  <xacro:include filename="$(find laboratorio_robotica)/urdf/pinza.transmission.xacro" />
+  <xacro:include filename="$(find laboratorio_robotica)/urdf/pinza.gazebo.xacro" />  
+
+  <xacro:macro name="pinza_IO_lab_robotica" params="prefix parent_conector">
+  
+    <xacro:pinza_IO_gazebo prefix="${prefix}"/>
+
+    <xacro:pinza_IO_transmission prefix="${prefix}" hw_interface="hardware_interface/PositionJointInterface"/>
+
+    <joint name="${prefix}base_joint" type="fixed">
+      <axis xyz="0 0 1"/>
+      <parent link="${parent_conector}"/>
+      <child link="${prefix}conector"/>
+      <origin rpy="1.57 0 0" xyz="-0.001 0.002 0.061"/>
+    </joint>
+    <link name="${prefix}conector">
+      <visual>
+        <geometry>
+          <mesh filename="package://laboratorio_robotica/mallas/Pinza/visual/conector.dae"/>
+        </geometry>
+        <material name="black">
+          <color rgba="${0/255} ${0/255} ${0/255} 1.0"/>
+        </material>
+        <origin rpy="0 1.57 0" xyz="-0.247 -0.063 0.196"/>
+      </visual>
+    <collision>
+      <origin rpy="0 1.57 0" xyz="-0.247 -0.063 0.196"/>
+      <geometry>
+        <mesh filename="package://laboratorio_robotica/mallas/Pinza/visual/conector.dae"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>	
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>		
+    </inertial>
+    </link>
+    <joint name="${prefix}conector_joint" type="fixed">
+      <parent link="${prefix}conector"/>
+      <child link="${prefix}body"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </joint>
+    <link name="${prefix}body">
+      <visual>
+        <geometry>
+          <mesh filename="package://laboratorio_robotica/mallas/Pinza/visual/body.dae"/>
+        </geometry>
+        <material name="black">
+          <color rgba="${0/255} ${0/255} ${0/255} 1.0"/>
+        </material>
+      </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://laboratorio_robotica/mallas/Pinza/visual/body.dae"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>	
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>		
+    </inertial>
+    </link>
+    <link name="${prefix}left_gripper">
+      <visual>
+        <geometry>
+          <mesh filename="package://laboratorio_robotica/mallas/Pinza/visual/left_gripper.dae"/>
+        </geometry>
+        <material name="silver">
+          <color rgba="0.75 0.75 0.75 1"/>
+        </material>
+        <origin rpy="0 0 0" xyz="0 0.004 -0.007"/>			
+      </visual>
+      <collision>
+        <origin rpy="0 0 0" xyz="0 0.004 -0.007"/>
+        <geometry>
+          <mesh filename="package://laboratorio_robotica/mallas/Pinza/visual/left_gripper.dae"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.1"/>	
+        <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>		
+      </inertial>
+    </link>
+    <joint name="${prefix}left_gripper_joint" type="revolute">
+      <axis xyz="1 0 0"/>
+      <parent link="${prefix}body"/>
+      <child link="${prefix}left_gripper"/>
+      <limit effort="1000.0" lower="0" upper="0.5" velocity="0.5"/>
+      <origin rpy="0 0 0" xyz="0 -0.004 0.007"/>
+    </joint>
+    <link name="${prefix}left_gripper_extension">
+      <visual>
+        <geometry>
+          <mesh filename="package://laboratorio_robotica/mallas/Pinza/visual/pinza_disenada.dae"/>
+        </geometry>
+        <material name="silver">
+          <color rgba="0.75 0.75 0.75 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://laboratorio_robotica/mallas/Pinza/visual/pinza_disenada.dae"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.1"/>	
+        <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>		
+      </inertial>
+    </link>
+    <joint name="${prefix}left_gripper_extension_joint" type="fixed">
+      <parent link="${prefix}left_gripper"/>
+      <child link="${prefix}left_gripper_extension"/>
+      <origin rpy="0 0 0" xyz="-0.011 0.023 -0.006"/>
+    </joint>
+    <link name="${prefix}rigth_gripper">
+      <visual>
+        <geometry>
+          <mesh filename="package://laboratorio_robotica/mallas/Pinza/visual/rigth_gripper.dae"/>
+        </geometry>
+        <material name="silver">
+          <color rgba="0.75 0.75 0.75 1"/>
+        </material>
+        <origin rpy="0 0 0" xyz="0 0.004 0.007"/>
+      </visual>
+      <collision>
+        <origin rpy="0 0 0" xyz="0 0.004 0.007"/>
+        <geometry>
+          <mesh filename="package://laboratorio_robotica/mallas/Pinza/visual/rigth_gripper.dae"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.1"/>	
+        <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>		
+      </inertial>
+    </link>
+    <joint name="${prefix}rigth_gripper_joint" type="revolute">
+      <axis xyz="1 0 0"/>
+      <parent link="${prefix}body"/>
+      <child link="${prefix}rigth_gripper"/>
+      <limit effort="1000.0" lower="-0.5" upper="0" velocity="0.5"/>
+      <origin rpy="0 0 0" xyz="0 -0.004 -0.007"/>
+    </joint>
+    <link name="${prefix}rigth_gripper_extension">
+      <visual>
+        <geometry> 
+          <mesh filename="package://laboratorio_robotica/mallas/Pinza/visual/pinza_disenada.dae"/>
+        </geometry>			
+      </visual>	
+      <collision>
+        <geometry>
+          <mesh filename="package://laboratorio_robotica/mallas/Pinza/visual/pinza_disenada.dae"/>
+        </geometry>
+      </collision>	
+      <inertial>
+        <mass value="0.1"/>	
+        <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>		
+      </inertial>
+    </link>
+    <joint name="${prefix}rigth_gripper_extension_joint" type="fixed">
+      <parent link="${prefix}rigth_gripper"/>
+      <child link="${prefix}rigth_gripper_extension"/>
+      <origin rpy="3.14 0 3.14" xyz="0.011 0.023 0.006"/>	
+    </joint>
+  </xacro:macro>
+</robot>

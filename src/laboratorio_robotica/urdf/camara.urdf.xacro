@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="camara">
+    <xacro:include filename="$(find laboratorio_robotica)/urdf/camara.gazebo.xacro"/>
+    <xacro:macro name="camara" params="prefix parent_link size x y z">
+        <joint name="${prefix}camera_joint" type="fixed">
+            <axis xyz="0 1 0" />
+            <origin xyz="${x} ${y} ${z}" rpy="0 ${pi/2} 0"/>
+            <parent link="${parent_link}"/>
+            <child link="camera_link"/>
+        </joint>
+
+        <!-- Camera -->
+        <link name="${prefix}camera_link">
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${size} ${size} ${size}"/>
+                </geometry>
+            </collision>
+
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${size} ${size} ${size}"/>
+                </geometry>
+                <material name="red"/>
+            </visual>
+
+            <inertial>
+                <mass value="1e-5" />
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+            </inertial>
+        </link>
+    </xacro:macro>    
+</robot>

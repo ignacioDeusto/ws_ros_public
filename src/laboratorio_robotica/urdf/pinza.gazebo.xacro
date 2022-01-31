@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <xacro:macro name="pinza_IO_gazebo" params="prefix">
+
+    <gazebo reference="${prefix}left_gripper">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="${prefix}rigth_gripper">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+
+  </xacro:macro>
+
+</robot>

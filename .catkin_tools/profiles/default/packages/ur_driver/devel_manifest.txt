@@ -1,0 +1,12 @@
+fmauch_universal_robot/ur_driver
+/home/ignacio/ws_ros/devel/.private/ur_driver/cmake.lock /home/ignacio/ws_ros/devel/./cmake.lock
+/home/ignacio/ws_ros/devel/.private/ur_driver/lib/pkgconfig/ur_driver.pc /home/ignacio/ws_ros/devel/lib/pkgconfig/ur_driver.pc
+/home/ignacio/ws_ros/devel/.private/ur_driver/lib/python3/dist-packages/ur_driver/__init__.py /home/ignacio/ws_ros/devel/lib/python3/dist-packages/ur_driver/__init__.py
+/home/ignacio/ws_ros/devel/.private/ur_driver/lib/python3/dist-packages/ur_driver/cfg/URDriverConfig.py /home/ignacio/ws_ros/devel/lib/python3/dist-packages/ur_driver/cfg/URDriverConfig.py
+/home/ignacio/ws_ros/devel/.private/ur_driver/lib/python3/dist-packages/ur_driver/cfg/__init__.py /home/ignacio/ws_ros/devel/lib/python3/dist-packages/ur_driver/cfg/__init__.py
+/home/ignacio/ws_ros/devel/.private/ur_driver/share/ur_driver/docs/URDriverConfig-usage.dox /home/ignacio/ws_ros/devel/share/ur_driver/docs/URDriverConfig-usage.dox
+/home/ignacio/ws_ros/devel/.private/ur_driver/share/ur_driver/docs/URDriverConfig.dox /home/ignacio/ws_ros/devel/share/ur_driver/docs/URDriverConfig.dox
+/home/ignacio/ws_ros/devel/.private/ur_driver/share/ur_driver/docs/URDriverConfig.wikidoc /home/ignacio/ws_ros/devel/share/ur_driver/docs/URDriverConfig.wikidoc
+/home/ignacio/ws_ros/devel/.private/ur_driver/share/ur_driver/cmake/ur_driverConfig-version.cmake /home/ignacio/ws_ros/devel/share/ur_driver/cmake/ur_driverConfig-version.cmake
+/home/ignacio/ws_ros/devel/.private/ur_driver/share/ur_driver/cmake/ur_driverConfig.cmake /home/ignacio/ws_ros/devel/share/ur_driver/cmake/ur_driverConfig.cmake
+/home/ignacio/ws_ros/devel/.private/ur_driver/include/ur_driver/URDriverConfig.h /home/ignacio/ws_ros/devel/include/ur_driver/URDriverConfig.h
